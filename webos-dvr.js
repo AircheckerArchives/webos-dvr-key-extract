@@ -1,4 +1,4 @@
-var target = ptr("0xdea8a5");
+var target = ptr("0x29571e8");
 
 console.log("[+] PVR_DEBUG_RetrieveDvrKey @ " + target);
 
