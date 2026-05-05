@@ -1,4 +1,5 @@
-var target = ptr("0xdea8a5");
+var base = Module.findBaseAddress("libhal_crypto.so.2.0.1");
+var target = base.add(0x3a21);
 
 console.log("[+] HAL_CRYPTO_ReadDVRDeviceSecret @ " + target);
 
