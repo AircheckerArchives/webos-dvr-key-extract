@@ -1,6 +1,6 @@
-var target = ptr("0x29571e8");
+var target = ptr("0xdea8a5");
 
-console.log("[+] PVR_DEBUG_RetrieveDvrKey @ " + target);
+console.log("[+] HAL_CRYPTO_ReadDVRDeviceSecret @ " + target);
 
 // int func(uint8_t *out, uint32_t *bits)
 var fn = new NativeFunction(target, "int", ["pointer", "pointer"]);
@@ -15,7 +15,7 @@ Memory.writeByteArray(out, new Uint8Array(16));
 Memory.writeU32(bits, 128);
 
 console.log("[*] before call: bits = " + Memory.readU32(bits));
-console.log("[*] calling PVR_DEBUG_RetrieveDvrKey(out, bits)");
+console.log("[*] calling HAL_CRYPTO_ReadDVRDeviceSecret(out, bits)");
 
 var rc = fn(out, bits);
 
